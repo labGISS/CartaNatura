@@ -133,3 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATA_UPLOAD_MAX_MEMORY_SIZE = 1048576000
 
 CORS_ALLOWED_ORIGINS: True
+
+# OSM tile servers require a Referer header; Django's default ('same-origin') strips it
+SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'

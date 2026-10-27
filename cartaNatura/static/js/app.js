@@ -1126,7 +1126,10 @@ var co2assorbita = 0;
 var stringaInfo = '';
 var mapcenter = [40.8471407, 14.8639451];
 var map = L.map('map', { zoomControl: false }).setView(mapcenter, 8);
-var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 var ComuniGroup = L.featureGroup().addTo(map);
 var comuniSelezionati = {}
 var arrayComuniIntersecati = []
